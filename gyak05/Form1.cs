@@ -34,7 +34,7 @@ namespace gyak05
             var response = mnbService.GetExchangeRates(request);
 
             var result = response.GetExchangeRatesResult;
-            richTextBox1.Text=result;
+            
         }
     }
 }
