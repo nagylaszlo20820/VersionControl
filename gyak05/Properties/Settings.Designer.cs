@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace UserMaintenance.Properties
+namespace gyak05.Properties
 {
 
 
