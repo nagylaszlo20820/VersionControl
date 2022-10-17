@@ -9,7 +9,7 @@ namespace gyak05
     internal class RateData
     {
         public DateTime Date { get; set; }
-        public string Currencry { get; set; }
+        public string Currency { get; set; }
         public decimal Value { get; set; }
 
     }
