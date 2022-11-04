@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace gyak05.Properties
+namespace gyak06.Properties
 {
 
 
