@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace gyak06
 {
-    public class BallFactory:IToyFactory
+    public class CarFactory:IToyFactory
     {
         public Toy CreateNew()
         {
-            return new Ball();
+            return new Car();
         }
     }
 }
