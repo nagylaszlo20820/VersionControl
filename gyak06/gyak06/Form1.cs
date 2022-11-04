@@ -19,7 +19,9 @@ namespace gyak06
         public IToyFactory Factory
         {
             get { return _factory; }
-            set { _factory = value;
+            set 
+            
+            { _factory = value;
                 DisplayNext();
             }
         }
@@ -71,8 +73,8 @@ namespace gyak06
         }
         private void DisplayNext()
         {
-            if (_nextToy != null)
-                Controls.Remove(_nextToy);
+            if (_nextToy != null) Controls.Remove(_nextToy);
+
             _nextToy = Factory.CreateNew();
             _nextToy.Top = label1.Top + label1.Height + 20;
             _nextToy.Left = label1.Left;
@@ -88,6 +90,38 @@ namespace gyak06
             if (colorPicker.ShowDialog() != DialogResult.OK)
                 return;
             button.BackColor = colorPicker.Color;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            var button = (Button)sender;
+            var colorPicker = new ColorDialog();
+
+            colorPicker.Color = button.BackColor;
+            if (colorPicker.ShowDialog() != DialogResult.OK)
+                return;
+            button.BackColor = colorPicker.Color;
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            var button = (Button)sender;
+            var colorPicker = new ColorDialog();
+
+            colorPicker.Color = button.BackColor;
+            if (colorPicker.ShowDialog() != DialogResult.OK)
+                return;
+            button.BackColor = colorPicker.Color;
+        }
+
+        private void btnSelectPresent_Click(object sender, EventArgs e)
+        {
+            Factory = new PresentFactory
+            {
+                PresentColor = button2.BackColor,
+                RibbonColor= button3.BackColor
+                
+            };
         }
     }
 }
