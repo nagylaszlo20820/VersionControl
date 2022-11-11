@@ -79,13 +79,13 @@ namespace gyak07
                                           select x)
                                         .ToList();
                 int id = 0;
-                sw.Write("Időszak "+ "Nyereség\n");
+                sw.Write("Időszak;"+"Nyereség\n");
                 
                 foreach (var item in nyereségekRendezve)
                 {
-                    sw.Write(id.ToString()+"    ");
+                    sw.Write(id.ToString()+";");
                     sw.Write(item);
-                    sw.Write("\n");
+                    sw.WriteLine();
                     id++;
                 }
             }
