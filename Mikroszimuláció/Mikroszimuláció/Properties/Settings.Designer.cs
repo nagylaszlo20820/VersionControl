@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace gyak07.Properties
+namespace Mikroszimuláció.Properties
 {
 
 
