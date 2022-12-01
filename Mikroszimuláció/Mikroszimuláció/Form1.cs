@@ -17,14 +17,21 @@ namespace Mikroszimuláció
         List<Person> Population = new List<Person>();
         List<BirthProbability> BirthProbabilities = new List<BirthProbability>();
         List<DeathProbability> DeathProbabilities = new List<DeathProbability>();
+        List<int> male = new List<int>();
+        List<int> female = new List<int>();
+        int seged = 0;
         public Form1()
         {
             InitializeComponent();
-            Population = GetPopulation(@"C:\Windows\Temp\nép.csv");
+            Population = GetPopulation(textBox1.Text);
             BirthProbabilities = GetBirthProbabilities(@"C:\Windows\Temp\születés.csv");
             DeathProbabilities = GetDeathProbabilities(@"C:\Windows\Temp\halál.csv");
-            dataGridView1.DataSource = BirthProbabilities.ToList();
-            for (int year = 2005; year <= 2024; year++)
+            
+        }
+
+        private void Simulation()
+        {
+            for (int year = 2005; year <= numericUpDown1.Value; year++)
             {
                 for (int i = 0; i < Population.Count; i++)
                 {
@@ -39,8 +46,18 @@ namespace Mikroszimuláció
                                     select x).Count();
                 Console.WriteLine(
                     string.Format("Év:{0} Fiúk:{1} Lányok:{2}", year, nbrOfMales, nbrOfFemales));
+                male.Add(nbrOfMales);
+                female.Add(nbrOfFemales);
             }
         }
+        public void DisplayResult()
+        {
+            for (int i = 2005; i <= numericUpDown1.Value; i++)
+            {
+                richTextBox1.Text = i.ToString() + male[seged];
+            }
+        }
+
         public List<Person> GetPopulation(string csvpath)
         {
             List<Person> population = new List<Person>();
@@ -127,6 +144,19 @@ namespace Mikroszimuláció
                     Population.Add(újszülött);
                 }
             }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Simulation();
+            DisplayResult();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog ofd = new OpenFileDialog();
+            if (ofd.ShowDialog() != DialogResult.OK) return;
+            textBox1.Text = ofd.FileName;
         }
     }
 }
