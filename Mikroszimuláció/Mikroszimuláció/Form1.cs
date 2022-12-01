@@ -54,7 +54,8 @@ namespace Mikroszimuláció
         {
             for (int i = 2005; i <= numericUpDown1.Value; i++)
             {
-                richTextBox1.Text = i.ToString() + male[seged];
+                richTextBox1.AppendText(string.Format("Szimulációs év:{0}\n\tFiúk:{1}\n\tLányok:{2}\n",i,male[seged],female[seged]));
+                seged++;
             }
         }
 
@@ -148,6 +149,9 @@ namespace Mikroszimuláció
 
         private void button2_Click(object sender, EventArgs e)
         {
+            richTextBox1.Clear();
+            male.Clear();
+            female.Clear();
             Simulation();
             DisplayResult();
         }
