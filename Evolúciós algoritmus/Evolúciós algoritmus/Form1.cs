@@ -44,7 +44,7 @@ namespace Evolúciós_algoritmus
             generation++;
             label1.Text = string.Format(
                 "{0}. generáció",
-                generation);
+                generation)
 
 
             var playerList = from p in gc.GetCurrentPlayers()
