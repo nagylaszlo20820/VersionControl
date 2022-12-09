@@ -58,6 +58,7 @@ namespace Evolúciós_algoritmus
             if (winners.Count() > 0)
             {
                 winnerBrain = winners.FirstOrDefault().Brain.Clone();
+                button1.Visible = true;
                 gc.GameOver -= Gc_GameOver;
                 return;
             }
