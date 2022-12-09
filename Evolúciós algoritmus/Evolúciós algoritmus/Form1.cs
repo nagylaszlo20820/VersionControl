@@ -54,7 +54,7 @@ namespace Evolúciós_algoritmus
 
             var winners = from p in topPerformers
                           where !p.IsWinner
-                          select p;
+                          select p
             if (winners.Count() > 0)
             {
                 winnerBrain = winners.FirstOrDefault().Brain.Clone();
