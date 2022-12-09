@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Mikroszimuláció")]
+[assembly: AssemblyTitle("Evolúciós algoritmus")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Mikroszimuláció")]
+[assembly: AssemblyProduct("Evolúciós algoritmus")]
 [assembly: AssemblyCopyright("Copyright ©  2022")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("48713105-fb2b-4ba1-9b93-cd3e06372261")]
+[assembly: Guid("3bd53585-a601-4103-a6c8-5d489e9cdffa")]
 
 // Version information for an assembly consists of the following four values:
 //

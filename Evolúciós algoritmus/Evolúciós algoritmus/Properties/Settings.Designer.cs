@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Mikroszimuláció.Properties
+namespace Evolúciós_algoritmus.Properties
 {
 
 

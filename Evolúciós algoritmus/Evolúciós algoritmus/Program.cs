@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Mikroszimuláció
+namespace Evolúciós_algoritmus
 {
     internal static class Program
     {
